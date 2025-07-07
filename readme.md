@@ -70,3 +70,42 @@ The server responds with a list of product matches that include:
 * The server includes robust error handling and logs every step of the process for easier debugging.
 * Confidence scores help determine the relevance of a product based on the original search query.
 * This tool is intended for educational or demo purposes; consider rate limits and TOS of APIs before production use.
+
+
+## Sample input Output
+
+- Input
+
+```
+curl -X POST http://localhost:3000/api/compare-prices \
+  -H "Content-Type: application/json" \
+  -d '{"query": "iPhone 15 Pro Max", "country": "US"}'
+```
+- Output
+```
+{
+  "success": true,
+  "query": "iPhone 15 Pro Max",
+  "country": "US",
+  "results": [
+    {
+      "productName": "Apple iPhone 15 Pro Max 256GB - Blue Titanium",
+      "price": 1199,
+      "currency": "USD",
+      "link": "https://www.example.com/product/iphone15pro-max-blue",
+      "website": "example.com",
+      "confidence": 92
+    },
+    {
+      "productName": "iPhone 15 Pro Max 128GB - Black Titanium",
+      "price": 1099,
+      "currency": "USD",
+      "link": "https://www.example2.com/apple-iphone15pro-max-black",
+      "website": "example2.com",
+      "confidence": 88
+    }
+  ],
+  "totalFound": 2,
+  "timestamp": "2025-07-07T13:00:00.000Z"
+}
+```
