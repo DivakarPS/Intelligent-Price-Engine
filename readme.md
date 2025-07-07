@@ -109,3 +109,8 @@ curl -X POST http://localhost:3000/api/compare-prices \
   "timestamp": "2025-07-07T13:00:00.000Z"
 }
 ```
+## Picture of working curl command in Local
+
+<img width="1214" alt="Screenshot 2025-07-08 at 12 49 14 AM" src="https://github.com/user-attachments/assets/5f8b6c21-a456-40a6-81c3-f3d3c6780e6e" />
+<img width="1507" alt="Screenshot 2025-07-08 at 12 49 30 AM" src="https://github.com/user-attachments/assets/a7b71048-1083-4e98-9ced-17512c2ade3f" />
+
