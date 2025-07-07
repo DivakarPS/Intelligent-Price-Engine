@@ -27,6 +27,17 @@ if (!process.env.GROQ_API_KEY || !SCRAPINGBEE_API_KEY || !SCRAPERAPI_API_KEY) {
   process.exit(1);
 }
 
+const CURRENCY_MAP = {
+  US: 'USD', IN: 'INR', UK: 'GBP', CA: 'CAD', AU: 'AUD',
+  DE: 'EUR', FR: 'EUR', IT: 'EUR', ES: 'EUR', JP: 'JPY',
+  BR: 'BRL', MX: 'MXN'
+};
+
+const COUNTRY_NAME_MAP = {
+    US: 'United States', IN: 'India', UK: 'United Kingdom', CA: 'Canada',
+    AU: 'Australia', DE: 'Germany', FR: 'France', JP: 'Japan'
+};
+
 
 function fallbackMatch(originalQuery, productTitle) {
     if (!originalQuery || !productTitle) return { match: false, confidence: 0, reason: 'Fallback: Missing data' };
