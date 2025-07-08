@@ -51,7 +51,7 @@ A powerful Node.js API that finds and compares product prices across multiple we
 
 1. **Clone the repository**:
 ```bash
-git clone (https://github.com/DivakarPS/Intelligent-Price-Engine)
+git clone https://github.com/DivakarPS/Intelligent-Price-Engine
 cd Intelligent-Price-Engine
 ```
 
